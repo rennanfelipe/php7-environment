@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/work-dir":{"guestpath":"/home/vagrant/work-dir","hostpath":"/Users/rennan.chaves/Development/php/work-dir","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/rennan.chaves/Development/php","disabled":false,"__vagrantfile":true}}}
