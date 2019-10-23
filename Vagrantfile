@@ -28,11 +28,11 @@ Vagrant.configure("2") do |config|
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine and only allow access
     # via 127.0.0.1 to disable public access
-    config.vm.network "forwarded_port", guest: 80, host: 3000, host_ip: "127.0.0.1"
+    config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1"
   
     # Create a private network, which allows host-only access to the machine
     # using a specific IP.
-    # config.vm.network "private_network", ip: "192.168.33.10"
+    config.vm.network "private_network", ip: "192.168.33.10"
   
     # Create a public network, which generally matched to bridged network.
     # Bridged networks make the machine appear as another physical device on
@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
     # the path on the host to the actual folder. The second argument is
     # the path on the guest to mount the folder. And the optional third
     # argument is a set of non-required options.
-    config.vm.synced_folder "./work-dir", "/home/vagrant/work-dir"
+    config.vm.synced_folder "./work-dir", "/var/www/html"
   
     # Provider-specific configuration so you can fine-tune various
     # backing providers for Vagrant. These expose provider-specific options.
